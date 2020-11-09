@@ -1,0 +1,70 @@
+import java.util.Scanner;
+import java.util.StringTokenizer;
+
+/*
+public class Assignment_4_String
+{
+
+	public static void main(String[] args) 
+	{
+		int vowels=0,constant=0,numbers=0,others=0;
+	  Scanner sc=new Scanner(System.in);
+	  String s1=sc.nextLine();
+	  
+	  String s2=s1.toLowerCase();
+	  
+	  for(int i=0;i<s2.length();i++)
+	  {
+		  char ch=s2.charAt(i);
+		  if(ch=='a' || ch=='e'|| ch=='i' || ch=='o' || ch=='u')
+		  {
+			  vowels++;
+		  }
+		  else if(ch>='a' && ch<='z')
+		  {
+			  constant++;
+		  }
+		  else if(ch>='0' && ch<='9')
+		  {
+			  numbers++;
+		  }
+		  else
+		  {
+			  others++; 
+		  }
+			 
+		  
+	  }
+	  System.out.println("Vowels = "+vowels);
+	  System.out.println("constant = "+constant);
+	  System.out.println("numbers = "+numbers);
+	  System.out.println("others = "+others);
+
+	}
+
+}
+*/
+
+public class Assignment_4_String
+{
+
+	public static void main(String[] args) 
+	{
+		Scanner sc=new Scanner(System.in);
+		String s=sc.nextLine();
+		String sarr[]= {"one","two","three","four","five","six","seven","eight","nine","ten"};
+		String obarr[]=new String[10];
+		StringTokenizer str=new StringTokenizer(s," ");
+		int i=0;
+		int digit=0;
+		while(str.hasMoreElements())
+		{
+			String s1=(String) str.nextElement();
+			obarr[i]=s1;
+			i++;
+			digit++;
+		}
+	
+	}
+
+}
