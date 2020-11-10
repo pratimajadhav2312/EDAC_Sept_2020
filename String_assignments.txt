@@ -1,0 +1,167 @@
+import java.util.Scanner;
+import java.util.StringTokenizer;
+
+/*
+public class Assignment_4_String
+{
+
+	public static void main(String[] args) 
+	{
+		int vowels=0,constant=0,numbers=0,others=0;
+	  Scanner sc=new Scanner(System.in);
+	  String s1=sc.nextLine();
+	  
+	  String s2=s1.toLowerCase();
+	  
+	  for(int i=0;i<s2.length();i++)
+	  {
+		  char ch=s2.charAt(i);
+		  if(ch=='a' || ch=='e'|| ch=='i' || ch=='o' || ch=='u')
+		  {
+			  vowels++;
+		  }
+		  else if(ch>='a' && ch<='z')
+		  {
+			  constant++;
+		  }
+		  else if(ch>='0' && ch<='9')
+		  {
+			  numbers++;
+		  }
+		  else
+		  {
+			  others++; 
+		  }
+			 
+		  
+	  }
+	  System.out.println("Vowels = "+vowels);
+	  System.out.println("constant = "+constant);
+	  System.out.println("numbers = "+numbers);
+	  System.out.println("others = "+others);
+
+	}
+
+}
+*/
+/*
+public class Assignment_4_String
+{
+
+	public static void main(String[] args) 
+	{
+		Scanner sc=new Scanner(System.in);
+		String s=sc.nextLine();
+		String sarr[]= {"one","two","three","four","five","six","seven","eight","nine","ten"};
+		String obarr[]=new String[10];
+		StringTokenizer str=new StringTokenizer(s," ");
+		int i=0;
+		int digit=0;
+		while(str.hasMoreElements())
+		{
+			String s1=(String) str.nextElement();
+			obarr[i]=s1;
+			i++;
+			digit++;
+		}
+	
+	}
+
+}
+*/
+
+//Que-3
+/*
+public class Assignment_4_String
+{
+
+	public static void main(String[] args) 
+	{
+		Scanner sc=new Scanner(System.in);
+		String str=sc.next();
+		char[] chr=str.toCharArray();
+		System.out.println(chr[0]);
+		for(int i=1;i<chr.length;i++)
+		{
+			if(chr[i]!=chr[i-1])
+			{
+				System.out.println(chr[i]);
+			}
+		}
+	
+	}
+
+}
+*/
+
+
+/*
+//que-4
+
+public class Assignment_4_String {
+	 public static void main(String[] args)
+	 {
+		 Scanner sc=new Scanner(System.in);
+		  System.out.println("The given string is: " );
+
+		 String str1= sc.next();
+	
+	  for (int i = 0; i < str1.length(); i++) {
+	   boolean unique = true;
+	   for (int j = 0; j < str1.length(); j++) {
+	    if (i != j && str1.charAt(i) == str1.charAt(j)) {
+	     unique = false;
+	     break;
+	    }
+	   }
+	   if (unique) {
+	    System.out.println("The first non repeated character in String is: " + str1.charAt(i));
+	    break;
+	   }
+	   else
+	   {
+		   System.out.println("Not found");
+	      break;
+	   }
+	  }
+	 }
+	}
+*/
+
+//Que -5
+/*
+public class Assignment_4_String {
+	 public static void main(String[] args)
+	 {
+		 Scanner sc=new Scanner(System.in);
+		  System.out.println("The given string is: " );
+
+		 String str1= sc.next();
+		 
+		 String[] s1=str1.split(" ");
+		
+		 for(String s2:s1)
+		 {
+			 System.out.println(s2);
+		 }
+	  
+	 }
+	}
+*/
+
+/*
+//Que-8
+
+public class Assignment_4_String {
+    public static void main(String[] args) {
+       Scanner scanner = new Scanner(System.in);
+       System.out.print("Input a string: ");
+       char[] letters = scanner.nextLine().toCharArray();
+       System.out.print("Reverse string: ");
+       for (int i = letters.length - 1; i >= 0; i--) {
+           System.out.print(letters[i]);
+       }
+       System.out.print("\n");
+   }
+}
+*/
