@@ -1,0 +1,36 @@
+use assignment_three;
+desc employee1_copy;
+desc department_copy;
+
+select * from employee1_copy;
+select * from department_copy;
+create table employee1_copy as select * from employee1;
+create table department_copy as select * from department;
+select employee1_copy.deptid,employee1_copy.empname, department_copy.dept_name from employee1_copy join department_copy on employee1_copy.deptid=department_copy.deptid;
+select * from employee1_copy join department_copy on employee1_copy.deptid=department_copy.deptid;
+select deptid,sum(salary) from employee1_copy group by deptid;
+select dept_name , empname from employee1_copy right join department_copy on employee1_copy.deptid=department_copy.deptid;
+select dept_name , empname from department_copy right join employee1_copy on employee1_copy.deptid=department_copy.deptid;
+alter table employee1_copy add primary key (empid);
+alter table employee1_copy add constraint fk_emp_mgr foreign key (manager) references employee1_copy(empid);
+select A.empid, A.empname as emp1, B.empname as manager from employee1_copy A join employee1_copy B on A.manager=B.empid;
+select employee1_copy.empname ,department_copy.dept_name from employee1_copy join department_copy on employee1_copy.empid=department_copy.deptid;
+
+-- union
+
+create table emp1 (emp_no int,emp_name varchar(10));
+
+create table emp2(emp_no int,emp_name varchar(10));
+
+insert into  emp1 values(1,'A'),(2,'B'),(3,'C');
+insert into  emp2 values(1,'A'),(2,'B'),(4,'D'),(5,'E');
+
+(select * from emp1) union (select * from emp2);
+
+
+-- SubQuery
+select empname,salary from employee1 where salary=(select salary from employee1 where empname='Arun' );
+select empname , deptid  from employee1_copy where deptid=(select deptid from employee1_copy where empname='jack' );
+select min(salary) from employee1_copy;
+select empname from employee1_copy where salary= (select min(salary) from employee1_copy);
+-- update employee1_copy set salary =15000 where deptid=(select deptid from employee1_copy where empname='Max1');
